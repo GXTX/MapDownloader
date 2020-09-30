@@ -28,7 +28,7 @@ jobs:
       github.event.action != 'pull_request' &&
       github.ref == 'refs/heads/actions' &&
       github.repository == 'GXTX/MapDownloader'
-    needs: build-windows
+    needs: Build
     env:
       artifact: Release
     runs-on: windows-latest
