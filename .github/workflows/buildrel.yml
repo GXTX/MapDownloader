@@ -15,10 +15,10 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Prepare artifacts
-     run: |
-       robocopy MapDownloader\bin\Release\netcoreapp3.1\ artifacts MapDownloader.exe /r:0 /w:0
-       If ($LastExitCode -le 7) { $LastExitCode = 0 }
-    - uses: actions/upload-artifact@v1
+      run: |
+        robocopy MapDownloader\bin\Release\netcoreapp3.1\ artifacts MapDownloader.exe /r:0 /w:0
+        If ($LastExitCode -le 7) { $LastExitCode = 0 }
+    - uses: actions/upload-artifact@v2
       with:
         name: Release
         path: artifacts
