@@ -13,4 +13,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore && ls -la
+      run: dotnet build --configuration Release --no-restore && ls "D:\a\MapDownloader\MapDownloader\MapDownloader\bin\Release\netcoreapp3.1\"
